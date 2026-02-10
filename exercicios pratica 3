@@ -1,0 +1,71 @@
+CREATE DATABASE novaPratica;
+USE novaPratica;
+
+CREATE TABLE tbJogo(
+idJogo INT PRIMARY KEY,
+nomejogo VARCHAR (30),
+diretorJogo VARCHAR (30),
+gêneroJogo VARCHAR (30),
+lançamentoJogo DATE,
+notaJogo INT,
+quantidadeJogo DECIMAL (10,2)
+);
+
+
+INSERT INTO tbJogo (idJogo, nomeJogo, diretorJogo, generoJogo, lancamentoJogo, notaJogo, quantidadeJogo)
+VALUES
+(1, 'The Last Quest', 'Ana Silva', 'Aventura', '2021-05-15', 9, 100.50),
+(2, 'Space Battle', 'Carlos Souza', 'Ficção', '2020-11-20', 8, 50.00),
+(3, 'Mystery Manor', 'Julia Santos', 'Mistério', '2022-01-10', 7, 75.25),
+(4, 'Speed Racer', 'Pedro Lima', 'Corrida', '2019-09-05', 8, 120.00),
+(5, 'Fantasy World', 'Mariana Costa', 'Fantasia', '2021-12-01', 9, 60.75);
+
+SELECT *FROM tbJogo;
+
+ALTER TABLE tbJogo
+ADD COLUMN tipoMidia ENUM('fisica', 'digital') NOT NULL DEFAULT 'digital';
+
+UPDATE tbJogo
+SEt diretorJogo='Marina silva'
+WHERE idjogo=2;
+
+UPDATE tbJogo
+SEt diretorJogo='Marina silva'
+WHERE idjogo=3;
+
+UPDATE tbJogo
+SEt diretorJogo='Marina silva'
+WHERE idjogo=4;
+
+UPDATE tbJogo
+SEt diretorJogo='Marina silva'
+WHERE idjogo=5;
+
+SELECT * 
+FROM tbJogo
+where lancamnetoJogo >= '2015/01/01';
+
+SELECT *
+FROM tbJogo
+Where nomeJogo LIKE'%a%'
+and tipoMidia='fisica';
+
+SELECT *
+FROM tbJogo
+WHERE diretorJogo NOT LIKE '%e%';
+
+ALTER TABLE tbJogo 
+ADD CONSTRAINT notaJogo
+CHECK (notaJogo >=0 AND notaJogo <11);
+
+SELECT* 
+FROM tbJogo
+WHERE gêneroJogo='aventura'
+and quantidadeJogo= 50.00;
+
+SELECT *
+FROM tbJogo
+
+
+
+
