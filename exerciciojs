@@ -66,6 +66,21 @@
         </center>
           <br><br>
 
+
+   <!--Exercício 6-->
+    <p> Exercicio 6<p>
+
+<center>
+<button type="button"   onclick="pare()">Pare!</button>
+
+<button type="button"   onclick="pense()">Pense</button>
+
+<button type="button"   onclick="siga()">Siga</button>
+        </center>
+
+
+
+
         <script>
            
   
@@ -116,12 +131,29 @@ function endereco(){
         alert('Por favor digite seus dados novamente');
     }
 }
-// exercicio 5
 
-function opinioes(){
+// exercicio 5
+function opiniaoavo(){
+    var notaneto = notaEscola.value;
+          Alert("Muito bem, que neto inteligente, porque tirou " + notaEscola;
+        }
+
+function opiniaomae(){
+  var notaneto = notaEscola.value;
+          Alert("Não fez mais que tua obrigação com essa nota " + notaEscola;)
+        }
+
    
-    
+    Function pare(){
+Alert("pare e aguarde ");
+  
 }
+Function pense(){
+Alert("Pense se pode seguir ou se deve parar!");
+    }
+Function siga(){
+Alert("Pode seguir adiante!");
+    }
 
 
 
